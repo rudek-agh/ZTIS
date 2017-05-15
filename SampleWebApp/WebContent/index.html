@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>The IBM Bluemix Translation Application</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="theme/myStyle.css" />
+ </head>
+ <body>
+  <table>
+   <tr>
+    <td colspan="2">
+     <img class = "eclipseIcon" src='images/WorldIcon.png'>
+    </td>
+    <td>
+     <h4> John J Andersen <span class="blue">Translation Application</span>. </h4>
+    </td>
+       </tr>
+   <tr>
+    <!-- The message comes from /TranslationServlet -->
+    <td colspan="4">
+     message
+    </td>
+   </tr>
+   <tr>
+    <th colspan="2">Enter text to be translated</th>
+    <th colspan="2">Translated text</th>
+   </tr>
+   <tr>
+    <td colspan="2">
+     <form action = "SimpleServlet">
+      <textarea rows = 12 cols = 50 autofocus name = "inputText"></textarea><br>
+      <input type="radio" name="target" value ="French" > French <br>
+      <input type="radio" name="target" value ="Spanish" checked> Spanish <br>
+      <input type="radio" name="target" value ="English"> English <br>
+      <input type="submit" name = "translate" Value = "Translate">
+      <input type="submit" name = "speech" Value = "Speech2Text">
+     </form>
+    </td>
+    <td  colspan="2" style='vertical-align:top;'>
+     <textarea id = "outPut" rows="12" cols="50" readonly name = "translatedText"></textarea>
+    </td>
+   </tr>
+   <tr>
+    <!--  This string will identify the language of the input text - it comes from /TranslateServlet -->
+    <td style='vertical-align:bottom;'>
+     <h1 id = 'inputLanguage'></h1>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

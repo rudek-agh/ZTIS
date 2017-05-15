@@ -1,0 +1,6 @@
+---
+applications:
+- name: SampleWebApp--14806
+  memory: 512M
+  host: SampleWebApp--14806
+  domain: mybluemix.net
